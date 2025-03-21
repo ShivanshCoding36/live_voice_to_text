@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Dost</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}" type="image/x-icon">
+
+</head>
+<body>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="home-content">
+            <h1>श्रवण दूत (Shravan Doot)</h1>
+            <p class="team-statement">Innovative Speech And Hearing Impairment Solutions</p>
+          
+        </div>
+        <div class="hero-content">
+            <h1>THE HEARING MESSENGER</h1>
+            <p>Join us in building a sustainable, safe, and inclusive world with cutting-edge waste management technology.</p>
+            <button class="hero-btn" onclick="scrollToSection('problem')">Learn More</button>
+        </div>
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='img/DRONE.jpeg') }}" alt="Project Image" class="project-photo">
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section glass">
+        <h2>The Communication Struggle for Deaf Children</h2>
+        <p>Deaf children (ages 5–17) face real-time communication challenges in schools, homes, and public spaces. This leads to social isolation, emotional struggles, and educational setbacks. Existing tools are often expensive, bulky, and not child-friendly. There’s a critical need for an affordable, portable, and eco-friendly solution to bridge this gap</p>
+        <div class="case-study">
+            <h3>Case Study: Bhiwandi Landfill Fire</h3>
+            <p>The 2016 Bhiwandi landfill fire in Maharashtra highlighted the consequences of inadequate waste management. Triggered by methane buildup, the fire produced toxic smoke for weeks, affecting nearby communities and causing respiratory issues. Unlike traditional methods, our approach focuses on early detection and proactive management to prevent such crises.</p>
+            <img src="{{ url_for('static', filename='img/BHIWANDI.JPEG') }}" alt="Bhiwandi Landfill Fire" class="case-study-image">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <h2>Our FEATURES</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="card-front">
+                    <h3>Real-Time Text Display</h3>
+                    <p>Transparent OLED screen converts speech into text above the line of sight for distraction-free communication.</p>
+                </div>
+                <div class="card-back">
+                    <img src="{{ url_for('static', filename='img/ARM.jpeg') }}" alt="Robotic Arm" class="feature-image">
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-front">
+                    <h3>Affordable & Eco-Friendly</h3>
+                    <p>Lightweight design using recycled materials and low-cost components keeps it sustainable and under ₹1500.</p>
+                </div>
+                <div class="card-back">
+                    <img src="{{ url_for('static', filename='img/app.jpg') }}" alt="AI System" class="feature-image">
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-front">
+                    <h3>Hands-Free & Portable</h3>
+                    <p>Blink detection for interaction and a compact, child-friendly design for all-day comfort.</p>
+                </div>
+                <div class="card-back">
+                    <img src="{{ url_for('static', filename='img/APP.jpeg') }}" alt="Monitoring App" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solutions" class="solution-section">
+        <h2>Our Solution</h2>
+        <p>
+            Our solution is a pair of smart glasses designed to bridge the communication gap for deaf children. The glasses use a transparent OLED display to convert spoken words into real-time text, ensuring easy communication in any setting. Built with eco-friendly, recycled materials, the lightweight design is durable and comfortable for everyday use. Cost-efficient components like the ESP32 processor and MEMS microphone keep the price under ₹1500, making it accessible to more families. A built-in blink detection system enables hands-free interaction, adding convenience. Compact and portable, the glasses are tailored to meet the needs of children aged 5 to 17.</p>
+    </section>
+
+    <!-- Registration Section -->
+<!-- Registration Section -->
+<section id="register" class="section glass">
+    <h2>Become a Part in improving the World</h2>
+    <p>“Join Us for a Safer, inclusive Planet”<br>Support by signing up today.</p>
+    <form id="registration-form">
+        <input type="text" name="name" placeholder="Full Name" required id="name">
+        <input type="email" name="email" placeholder="Email Address" required id="email" autocomplete="off">
+        <input type="text" name="address" placeholder="Address" required id="address">
+        <input type="tel" name="phone" placeholder="Phone Number" required id="phone">
+        <input type="text" name="method" placeholder="Preferred Waste Collection Method" required id="method">
+        <button type="submit" style="margin-left: 10px;">Register</button>
+    </form>
+    <p id="success-message" class="hidden">Thank you for registering! We will be in touch soon.</p>
+</section>
+
+
+<!-- Timeline Section -->
+<section id="timeline" class="timeline-section">
+    <h2>Our Journey</h2>
+    <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+            <div class="timeline-date">January 2023</div>
+            <div class="timeline-content">
+                <h3>Project Conceptualization</h3>
+                <p>The idea for Shravan Doot was born, aiming to bridge the communication gap for children with hearing impairments.</p>
+            </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+            <div class="timeline-date">June 2023</div>
+            <div class="timeline-content">
+                <h3>Prototyping Phase</h3>
+                <p>Developed the first working prototype featuring real-time text display and eco-friendly materials.</p>
+            </div>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+            <div class="timeline-date">October 2023</div>
+            <div class="timeline-content">
+                <h3>Field Testing</h3>
+                <p>Tested the device in schools and public spaces to gather valuable feedback from real users.</p>
+            </div>
+        </div>
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item">
+            <div class="timeline-date">January 2024</div>
+            <div class="timeline-content">
+                <h3>Partnerships and Funding</h3>
+                <p>Secured partnerships with leading organizations and obtained funding for further development.</p>
+            </div>
+        </div>
+        <!-- Timeline Item 5 -->
+        <div class="timeline-item">
+            <div class="timeline-date">July 2024</div>
+            <div class="timeline-content">
+                <h3>Product Launch</h3>
+                <p>Launched Shravan Doot, making it accessible to families and schools nationwide.</p>
+            </div>
+        </div>
+        <!-- Timeline Item 6 -->
+        <div class="timeline-item">
+            <div class="timeline-date">Future Plans</div>
+            <div class="timeline-content">
+                <h3>Global Expansion</h3>
+                <p>Plan to introduce multi-language support, AI features, and enhanced functionalities to reach a global audience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+        <div class="impact-block">
+            <h3>Future Improvements</h3>
+            <p>Future versions of the glasses will feature AI-powered contextual responses with blink-to-select functionality, enhancing interaction. Customizable text options and tone detection will cater to diverse age groups and communication needs. Energy efficiency improvements, like solar-powered batteries, will extend usage time while being eco-friendly. With global language support, the glasses aim to transform communication for millions of children worldwide.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="impact-block">
+            <h3>Our Vision for a Sustainable Future</h3>
+            <p>This project supports India’s Skill India Mission by fostering innovation, skill development, and empowering youth to solve real-world challenges. It aligns with the Viksit Bharat Vision, addressing healthcare needs through affordable, sustainable, and inclusive solutions. By showcasing India’s potential to create global innovations for social good, the project highlights the role of Indian youth in transforming lives.
+
+
+
+
+
+
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Shivansh">
+                <p>Shivansh - AI/ML Model Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Hardik">
+                <p>Hardik - Hardware Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Revansh">
+                <p>Revansh - Research design and content creator</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Deepali">
+                <p>Deepali Mathur - Mentor</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Deepali">
+                <p>Deepali Mathur - Mentor</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Deepali">
+                <p>Deepali Mathur - Mentor</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Deepali">
+                <p>Deepali Mathur - Mentor</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p><strong>Manager:</strong> Revansh Adlakha</p>
+        <p><strong>Email:</strong> revanshadlakha2009@gmail.com</p>
+        <p><strong>Phone:</strong> 9811869949</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="faqs-section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <ul>
+            <li><strong>What was the Love Canal disaster, and why is it important?</strong> 
+                The Love Canal disaster highlights the importance of regulated waste disposal, a priority we address with our technology.</li>
+            <li><strong>How does your AI system help prevent environmental hazards like Love Canal?</strong>
+                 Our AI system sorts and monitors waste with unmatched accuracy, reducing contamination risks.</li>
+            <li><strong>What environmental benefits does your system provide?</strong> 
+                It reduces greenhouse gases, conserves resources, and promotes ecosystem health.</li>
+            <li><strong>How can I contribute?</strong> 
+                Register with us to ensure responsible waste management.</li>
+            <li><strong>How does real-time monitoring work?</strong> 
+                Our app continuously tracks waste processing with real-time alerts and insights.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AI Waste Management System | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll to Sections
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        }
+        
+        // Registration Form Submission
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                phone: document.getElementById('phone').value,
+                method: document.getElementById('method').value
+            };
+        
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) return response.json();
+                return response.json().then(err => Promise.reject(err));
+            })
+            .then(data => {
+                document.getElementById('success-message').classList.remove('hidden');
+                document.getElementById('registration-form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert(error.message || 'Registration failed. Please try again.');
+            });
+        });
+
+        // Toggle menu visibility
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+    }
+}
+
+// Close menu when a link is clicked
+document.querySelectorAll('#nav-links li a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (screen.width < 600){
+        document.getElementById('nav-links').style.display = 'none';}
+    });
+});
+
+        </script>
+        
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/21/07/20241121073320-TR53JIMV.js"></script>
+        
+</body>
+</html>

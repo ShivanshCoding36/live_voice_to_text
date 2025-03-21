@@ -1,0 +1,6 @@
+sudo apt-get update
+sudo apt-get install python3-pip python3-pil python3-smbus
+sudo apt install ffmpeg
+pip3 install sounddevice whisper openai-whisper adafruit-circuitpython-ssd1306
+sudo raspi-config
+i2cdetect -y 1

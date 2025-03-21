@@ -1,0 +1,427 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(21, 17, 56);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: rgba(10, 10, 10, 0.9);
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2a9c84;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #151138, #2a9c84);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.hero-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #2a9c84;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    background: cyan;
+}
+
+/* Glass Sections */
+.section, .features-section, .solution-section, .faqs-section, .impact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: 250px;
+    height: 320px;
+    perspective: 1000px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-front {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-back {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotateY(180deg);
+}
+
+.feature-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.feature-card:hover .card-back {
+    transform: rotateY(0);
+}
+
+.feature-image {
+    width: 150px;
+    height: 267px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Registration Form */
+#registration-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#registration-form input, #registration-form button {
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#registration-form button {
+    background: #2a9c84;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#registration-form button:hover {
+    background: cyan;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: cyan;
+}
+.team-section {
+    text-align: center; /* Center the text */
+}
+
+.team-members {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.team-member {
+    margin: 20px; /* Add some space between team members */
+    max-width: 150px; /* Set a max width for the team member cards */
+}
+
+.team-member img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: make images circular */
+}
+
+/* Centering the Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #151138;/* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.project-image {
+    flex: 0 0 auto; /* Prevents the image container from growing */
+    width: 540px; /* Sets the width of the image container */
+    height: 267px; /* Sets the height of the image container */
+    margin-top: 20px;
+}
+
+.project-photo {
+    width: 540px; /* Sets the width of the image */
+    height: 267px; /* Sets the height of the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hide the menu icon and keep the full menu on larger screens */
+/* Move the menu icon to the right */
+/* Move the menu icon to the right */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 56vw;
+    color: rgb(2, 255, 255);
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 600px) {
+    
+    header{
+        background-color: rgba(10, 10, 10, 0.473);
+    }
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        opacity: 1;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        background-color: black; /* Set background to black when opened */
+        opacity: 1;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        color: rgb(2, 255, 255); /* Adjust color for contrast */
+        padding: 10px;
+        display: block; /* Make links fill the line */
+        opacity: 1;
+    }
+    
+    
+}
+
+/* General Mobile Styling */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    header {
+        padding: 10px; /* Adjust padding for header */
+        justify-content: space-between; /* Space out menu icon and logo */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 56vw;
+        color: rgb(2, 255, 255);
+    }
+
+    nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.896); /* Ensure menu has contrast */
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 15px 20px; /* Add padding for touch targets */
+        text-align: center; /* Center align links */
+    }
+
+    .hero-section {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjust font size for headlines */
+    }
+
+    .hero-btn {
+        padding: 8px 20px; /* Adjust button size */
+    }
+
+    .project-image {
+        width: 100%; /* Make image container full width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .project-photo {
+        width: 100%; /* Image scales with container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .features-section {
+        padding: 20px;
+    }
+
+    .feature-card {
+        width: 100%; /* Feature cards take full width */
+        margin-bottom: 20px; /* Add space between cards */
+    }
+
+    #registration-form {
+        width: 100%; /* Form takes full width */
+    }
+
+    #registration-form input, #registration-form button {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 10px; /* Smaller padding for mobile */
+    }
+
+    .team-members {
+        flex-direction: column; /* Stack team members */
+    }
+
+    .team-member {
+        width: 100%; /* Team members take full width */
+    }
+
+    footer {
+        font-size: 12px; /* Adjust footer text size */
+    }
+}
+/* Timeline Section */
+.timeline-section {
+    padding: 50px;
+    background-color: #151138; /* Matches website's dark background */
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: cyan; /* Matches the cyan accents of the website */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    text-align: left;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: right;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: cyan; /* Matches the timeline line */
+    border-radius: 50%;
+    top: 20px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white; /* Matches the text color of the website */
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background-color: rgba(42, 156, 132, 0.8); /* Matches the hero section gradient and glass effect */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: white; /* Ensure text is readable */
+}

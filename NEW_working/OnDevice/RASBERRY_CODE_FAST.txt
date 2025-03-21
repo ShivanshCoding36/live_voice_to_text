@@ -1,0 +1,9 @@
+sudo apt-get update
+sudo apt-get install git build-essential cmake python3-pip portaudio19-dev
+pip3 install sounddevice pillow adafruit-circuitpython-ssd1306
+git clone https://github.com/ggerganov/whisper.cpp.git
+
+cd whisper.cpp
+make
+
+./models/download-ggml-model.sh tiny
